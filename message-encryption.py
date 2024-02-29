@@ -1,7 +1,7 @@
-import sys ,os # > os linux 
+import sys ,os 
 from cryptography.fernet import Fernet
 from colorama import Fore as color
-#NOTE => kindely set $PATH as per your system in line 26
+#NOTE => kindely set $PATH as per your system in line 26 at place {None}
 
 def print_Logo():
     print('\x1b[37;36m                        Script [ KESHAV RAJ ]             \x1b[37;36m')
@@ -23,7 +23,7 @@ def option():
 * Press [{color.RED}4{color.CYAN}] for exit.
           ''',color.WHITE)
 
-def message_encryption(val,message,key=None,PATH='/home/../.../mess.txt'): # val 1 for encrypt and 2 for de-crypt
+def message_encryption(val,message,key=None,PATH='/home/../../mess.txt'): # val 1 for encrypt and 2 for de-crypt
     if val == 1:
         new_key = Fernet.generate_key()
         fernet = Fernet(new_key)
@@ -63,11 +63,14 @@ if __name__=='__main__':
             pass
         
         case 3:
-            os.system('clear')
+            if os.name =='nt':
+                os.system('cls') # Use "cls" for Windows
+            else:
+                os.system('clear') # Use "clear" for Linux and macOS
             print(color.GREEN,'''
 * Press 1 for en-crypt.
 * Press 2 for de-crypt.
-* Press else for exit.
+* Press AnyKey for exit.
                   ''',color.WHITE)
             choise = (input('└─>'))
             try :
