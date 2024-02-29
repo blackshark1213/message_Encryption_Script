@@ -23,7 +23,7 @@ def option():
 * Press [{color.RED}4{color.CYAN}] for exit.
           ''',color.WHITE)
 
-def message_encryption(val,message,key=None,PATH='/home/blackshark/Desktop/mess.txt'): # val 1 for encrypt and 2 for de-crypt
+def message_encryption(val,message,key=None,PATH='/home/../.../mess.txt'): # val 1 for encrypt and 2 for de-crypt
     if val == 1:
         new_key = Fernet.generate_key()
         fernet = Fernet(new_key)
