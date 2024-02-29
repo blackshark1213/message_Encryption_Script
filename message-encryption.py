@@ -1,4 +1,4 @@
-import sys ,os
+import sys ,os # > os linux 
 from cryptography.fernet import Fernet
 from colorama import Fore as color
 #NOTE => kindely set $PATH as per your system in line 26
